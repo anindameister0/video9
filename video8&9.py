@@ -399,3 +399,401 @@ Love comes after true infatuation
 Infatuation happens after true admiration
 Admiration could be based on beauty or personality
 >>> 
+def love():
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty();
+			print('Beauty is based on three things: natural, artificial, state of mind');
+	infatuation();
+	admiration();
+	
+SyntaxError: invalid syntax
+>>> def love():
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+	infatuation();
+	admiration();
+		beauty();
+		
+SyntaxError: unexpected indent
+>>> def love():
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+	infatuation();
+	admiration();
+	beauty();
+
+	
+>>> love()
+Love comes after true infatuation
+Infatuation happens after true admiration
+Admiration could be based on beauty or personality
+Traceback (most recent call last):
+  File "<pyshell#131>", line 1, in <module>
+    love()
+  File "<pyshell#130>", line 11, in love
+    beauty();
+NameError: name 'beauty' is not defined
+>>> def love():
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+	infatuation();
+	admiration();
+	beauty();
+
+	
+>>> admiration()
+Traceback (most recent call last):
+  File "<pyshell#134>", line 1, in <module>
+    admiration()
+NameError: name 'admiration' is not defined
+>>> admiration():
+	
+SyntaxError: invalid syntax
+>>> admiration()
+Traceback (most recent call last):
+  File "<pyshell#136>", line 1, in <module>
+    admiration()
+NameError: name 'admiration' is not defined
+>>> infatuation()
+Traceback (most recent call last):
+  File "<pyshell#137>", line 1, in <module>
+    infatuation()
+NameError: name 'infatuation' is not defined
+>>> def love():
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+		beauty();
+	infatuation();
+	admiration();
+
+	
+>>> love()
+Love comes after true infatuation
+Infatuation happens after true admiration
+Admiration could be based on beauty or personality
+Beauty is based on three things: natural, artificial, state of mind
+>>> def love():
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
+
+	
+>>> def love():
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+			def naturalbeauty():
+				print('Natural beauty is God gifted')
+			def artificialbeauty():
+				print('Created within a short span of time by tremendous human efforts')
+			def stateofmind():
+				print('This is developed by tremendous human effort over extended period of time')
+			naturalbeauty();
+			artificialbeauty();
+			stateofmind();
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
+
+	
+>>> love()
+Love comes after true infatuation
+Infatuation happens after true admiration
+Admiration could be based on beauty or personality
+Beauty is based on three things: natural, artificial, state of mind
+Natural beauty is God gifted
+Created within a short span of time by tremendous human efforts
+This is developed by tremendous human effort over extended period of time
+>>> def love():
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+			def naturalbeauty():
+				print('Natural beauty is God gifted')
+			def artificialbeauty():
+				print('artificial beauty is created within a short span of time by tremendous human efforts')
+			def stateofmind():
+				print('state of mind is developed by tremendous human effort over extended period of time')
+			def personality():
+				print('a good personality is developed over an extended period of time by tremendous human effort')
+			naturalbeauty();
+			artificialbeauty();
+			stateofmind();
+			personality();
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
+
+	
+>>> love()
+Love comes after true infatuation
+Infatuation happens after true admiration
+Admiration could be based on beauty or personality
+Beauty is based on three things: natural, artificial, state of mind
+Natural beauty is God gifted
+artificial beauty is created within a short span of time by tremendous human efforts
+state of mind is developed by tremendous human effort over extended period of time
+a good personality is developed over an extended period of time by tremendous human effort
+>>> print(show.__doc__)
+Traceback (most recent call last):
+  File "<pyshell#148>", line 1, in <module>
+    print(show.__doc__)
+NameError: name 'show' is not defined
+>>> print(love.__doc__)
+None
+>>> print(beauty.__doc__)
+Traceback (most recent call last):
+  File "<pyshell#150>", line 1, in <module>
+    print(beauty.__doc__)
+NameError: name 'beauty' is not defined
+>>> print(infatuation.__doc__)
+Traceback (most recent call last):
+  File "<pyshell#151>", line 1, in <module>
+    print(infatuation.__doc__)
+NameError: name 'infatuation' is not defined
+>>> print(sum.__doc__)
+Return the sum of a 'start' value (default: 0) plus an iterable of numbers
+
+When the iterable is empty, return the start value.
+This function is intended specifically for use with numeric values and may
+reject non-numeric types.
+>>> def love():
+	'''Trying to show nested fucntion'''
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+			def naturalbeauty():
+				print('Natural beauty is God gifted')
+			def artificialbeauty():
+				print('artificial beauty is created within a short span of time by tremendous human efforts')
+			def stateofmind():
+				print('state of mind is developed by tremendous human effort over extended period of time')
+			def personality():
+				print('a good personality is developed over an extended period of time by tremendous human effort')
+			naturalbeauty();
+			artificialbeauty();
+			stateofmind();
+			personality();
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
+
+	
+>>> print(love.__doc__)
+Trying to show nested fucntion
+>>> def love():
+	'''Trying to show nested fucntion'''
+	# Don't try to supercede your Mommy'
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			print('Beauty is based on three things: natural, artificial, state of mind');
+			def naturalbeauty():
+				print('Natural beauty is God gifted')
+			def artificialbeauty():
+				print('artificial beauty is created within a short span of time by tremendous human efforts')
+			def stateofmind():
+				print('state of mind is developed by tremendous human effort over extended period of time')
+			def personality():
+				print('a good personality is developed over an extended period of time by tremendous human effort')
+			naturalbeauty();
+			artificialbeauty();
+			stateofmind();
+			personality();
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
+
+	
+>>> print(love.__doc__)
+Trying to show nested fucntion
+>>> def love():
+	'''Trying to show nested fucntion'''
+	# Don't try to supercede your Mommy'
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			'''Dont try to supercede your Mommy'''
+			print('Beauty is based on three things: natural, artificial, state of mind');
+			def naturalbeauty():
+				print('Natural beauty is God gifted')
+			def artificialbeauty():
+				print('artificial beauty is created within a short span of time by tremendous human efforts')
+			def stateofmind():
+				print('state of mind is developed by tremendous human effort over extended period of time')
+			def personality():
+				print('a good personality is developed over an extended period of time by tremendous human effort')
+			naturalbeauty();
+			artificialbeauty();
+			stateofmind();
+			personality();
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
+
+	
+>>> print(beauty.__doc__)
+Traceback (most recent call last):
+  File "<pyshell#161>", line 1, in <module>
+    print(beauty.__doc__)
+NameError: name 'beauty' is not defined
+>>> def love():
+	'''Trying to show nested fucntion'''
+	# Don't try to supercede your Mommy'
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			'''Dont try to supercede your Mommy'''
+			print('Beauty is based on three things: natural, artificial, state of mind');
+			def naturalbeauty():
+				print('Natural beauty is God gifted')
+			def artificialbeauty():
+				print('artificial beauty is created within a short span of time by tremendous human efforts')
+			def stateofmind():
+				print('state of mind is developed by tremendous human effort over extended period of time')
+			def personality():
+				print('a good personality is developed over an extended period of time by tremendous human effort')
+			naturalbeauty();
+			artificialbeauty();
+			stateofmind();
+			personality();
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
+	print(beauty.__doc__)
+
+	
+>>> love()
+Love comes after true infatuation
+Infatuation happens after true admiration
+Admiration could be based on beauty or personality
+Beauty is based on three things: natural, artificial, state of mind
+Natural beauty is God gifted
+artificial beauty is created within a short span of time by tremendous human efforts
+state of mind is developed by tremendous human effort over extended period of time
+a good personality is developed over an extended period of time by tremendous human effort
+Traceback (most recent call last):
+  File "<pyshell#165>", line 1, in <module>
+    love()
+  File "<pyshell#164>", line 27, in love
+    print(beauty.__doc__)
+NameError: name 'beauty' is not defined
+>>> def love():
+	'''Trying to show nested fucntion'''
+	# Don't try to supercede your Mommy'
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			'''Dont try to supercede your Mommy'''
+			print('Beauty is based on three things: natural, artificial, state of mind');
+			def naturalbeauty():
+				print('Natural beauty is God gifted')
+			def artificialbeauty():
+				print('artificial beauty is created within a short span of time by tremendous human efforts')
+			def stateofmind():
+				print('state of mind is developed by tremendous human effort over extended period of time')
+			def personality():
+				print('a good personality is developed over an extended period of time by tremendous human effort')
+			naturalbeauty();
+			artificialbeauty();
+			stateofmind();
+			personality();
+		print(beauty.__doc__)
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
+
+	
+>>> 
+>>> love()
+Love comes after true infatuation
+Infatuation happens after true admiration
+Admiration could be based on beauty or personality
+Dont try to supercede your Mommy
+Beauty is based on three things: natural, artificial, state of mind
+Natural beauty is God gifted
+artificial beauty is created within a short span of time by tremendous human efforts
+state of mind is developed by tremendous human effort over extended period of time
+a good personality is developed over an extended period of time by tremendous human effort
+>>> def love():
+	'''Trying to show nested fucntion'''
+	# Don't try to supercede your Mommy'
+	print('Love comes after true infatuation');
+	def infatuation():
+		print('Infatuation happens after true admiration');
+	def admiration():
+		print('Admiration could be based on beauty or personality');
+		def beauty():
+			'''DONT TRY TO SUPERCEDE YOUR MOMMY'''
+			print('Beauty is based on three things: natural, artificial, state of mind');
+			def naturalbeauty():
+				print('Natural beauty is God gifted')
+			def artificialbeauty():
+				print('artificial beauty is created within a short span of time by tremendous human efforts')
+			def stateofmind():
+				print('state of mind is developed by tremendous human effort over extended period of time')
+			def personality():
+				print('a good personality is developed over an extended period of time by tremendous human effort')
+			naturalbeauty();
+			artificialbeauty();
+			stateofmind();
+			personality();
+		print(beauty.__doc__)
+		beauty(); #function can be only called inside function and not outside
+	infatuation();
+	admiration();
